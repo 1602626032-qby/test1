@@ -1,19 +1,9 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { viteSingleFile } from 'vite-plugin-singlefile';
-
-// 本地双击打开用 base: './'；部署到 GitHub Pages 用 base: '/'
-const base = process.env.VITE_BASE === 'local' ? './' : '/';
-const singleFile = process.env.VITE_SINGLEFILE === 'true';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base,
-  plugins: [react(), ...(singleFile ? [viteSingleFile()] : [])],
-  resolve: {
-    alias: {
-      '@': new URL('./src', import.meta.url).pathname,
-    },
-  },
-});
+  plugins: [react()],
+  base: '/test1/',   // 重点：这里要改成你的仓库名字，前后都要加斜杠
+})
 
 
