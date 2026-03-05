@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.card {
+  width: 140px;
+  flex: 0 0 auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon {
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+.name {
+  margin-top: 10px;
+  text-align: center;
+  color: #1e293b;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  gap: 6px;
+}
+
+.card:hover .actions {
+  display: flex;
+}
+
